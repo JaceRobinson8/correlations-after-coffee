@@ -1,7 +1,3 @@
-<!DOCTYPE html>
-<html>
-<body>
-  <h1>My Blog</h1>
-  <p>{{ post }}</p>
-</body>
-</html>
+{% load markdownify %}
+
+{{post.content | markdownify}}
