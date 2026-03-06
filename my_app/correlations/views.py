@@ -1,4 +1,4 @@
-from django.shortcuts import render
+from django.shortcuts import get_object_or_404, render
 from django.utils import timezone
 from django.views import generic
 
@@ -20,5 +20,5 @@ class IndexView(generic.ListView):
 
 
 class DetailView(generic.DetailView):
+    model = Post
     template_name = "correlations/detail.html"
-    context_object_name = "entry"
