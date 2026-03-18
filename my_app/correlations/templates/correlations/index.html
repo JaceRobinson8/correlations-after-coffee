@@ -1,6 +1,15 @@
 {% load static %}
-<link rel="stylesheet" href="{% static 'correlations/style.css' %}">
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>{{ post.title }}</title>
+  <link rel="stylesheet" href="{% static 'correlations/out.css' %}">
+</head>
 
+<body>
+    <div class="min-h-screen bg-slate-100 px-4 py-8">
 {% if latest_entries %}
     <ul>
     {% for entry in latest_entries %}
@@ -10,3 +19,6 @@
 {% else %}
     <p>No entries are available.</p>
 {% endif %}
+</div>
+</body>
+</html>
