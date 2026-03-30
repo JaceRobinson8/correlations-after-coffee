@@ -1,13 +1,33 @@
-<!DOCTYPE html>
+<!doctype html>
 <html>
-<head>
+  <head>
     <title>My Django App</title>
     {% load static %}
-    <link href="{% static 'correlations/output.css' %}" rel="stylesheet" type="text/css" />
-</head>
-<body>
+    <link
+      href="{% static 'correlations/output.css' %}"
+      rel="stylesheet"
+      type="text/css"
+    />
+  </head>
+  <body>
     <button class="btn">button1</button>
-    <button class="btn btn-primary">Button</button>
-    <button class="btn w-64 rounded-full">Button</button>
-</body>
+    <div class="card bg-base-100 w-96 shadow-sm">
+      <figure>
+        <img
+          src="https://img.daisyui.com/images/stock/photo-1606107557195-0e29a4b5b4aa.webp"
+          alt="Shoes"
+        />
+      </figure>
+      <div class="card-body">
+        <h2 class="card-title">Card Title</h2>
+        <p>
+          A card component has a figure, a body part, and inside body there are
+          title and actions parts
+        </p>
+        <div class="card-actions justify-end">
+          <button class="btn btn-primary">Buy Now</button>
+        </div>
+      </div>
+    </div>
+  </body>
 </html>
