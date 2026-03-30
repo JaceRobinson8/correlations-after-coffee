@@ -1,24 +1,11 @@
-{% load static %}
 <!DOCTYPE html>
-<html lang="en">
+<html>
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>{{ post.title }}</title>
-  <link rel="stylesheet" href="{% static 'correlations/out.css' %}">
+    <title>My Django App</title>
+    {% load static %}
+    <link href="{% static 'correlations/output.css' %}" rel="stylesheet" type="text/css" />
 </head>
-
 <body>
-    <div class="min-h-screen bg-slate-100 px-4 py-8">
-{% if latest_entries %}
-    <ul>
-    {% for entry in latest_entries %}
-        <li>{{entry}}</li>
-    {% endfor %}
-    </ul>
-{% else %}
-    <p>No entries are available.</p>
-{% endif %}
-</div>
+    <button class="btn">Hello daisyUI</button>
 </body>
 </html>
